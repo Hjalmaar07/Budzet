@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">Budzet</string>
-    <string name="registerButtonCommit">Zarejestruj</string>
-    <string name="loginButtonCommit">Zaloguj</string>
-    <string name="title_activity_register">Register</string>
+    <string name="buttonRegister">Zarejestruj</string>
+    <string name="title_activity_register">Zarejestruj</string>
     <string name="buttonLogin">Zaloguj</string>
     <string name="editTextHintEmail">e-mail</string>
     <string name="editTextHint">haslo</string>
-    <string name="title_activity_login">Login</string>
-    <string name="textview">Nieposiadasz jeszcze konta?</string>
+    <string name="title_activity_login">Zaloguj</string>
+    <string name="textview">Nie posiadasz jeszcze konta?</string>
+    <string name="textview2">Masz już konto?</string>
     <string name="Register">Zarejestruj</string>
 </resources>

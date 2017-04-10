@@ -9,4 +9,10 @@
     <string name="textview">Nie posiadasz jeszcze konta?</string>
     <string name="textview2">Masz już konto?</string>
     <string name="Register">Zarejestruj</string>
+    <string name="Submit">Dodaj</string>
+    <string name="textView5">Opis</string>
+    <string name="textView6">Nazwa</string>
+    <string name="textView7">Miejsce</string>
+    <string name="buttonAdd">Dodaj</string>
 </resources>
+

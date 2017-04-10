@@ -21,12 +21,13 @@
         android:onClick="goToLogin" />
 
     <Button
-        android:id="@+id/AddProject"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonGoToLogin"
-        android:layout_marginEnd="54dp"
-        android:layout_marginTop="182dp"
-        android:layout_toStartOf="@+id/buttonGoToLogin"
-        android:text="Dodaj" />
+        android:id="@+id/buttonAdd"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="136dp"
+        android:onClick="goToProject"
+        android:text="@string/buttonAdd" />
+
 </RelativeLayout>

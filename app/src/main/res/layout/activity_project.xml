@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_project"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dkuberski.budzet.Project">
+
+    <EditText
+        android:id="@+id/NazwaInsert"
+        android:layout_width="103dp"
+        android:layout_height="37dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/MiejsceTxt" />
+
+    <EditText
+        android:id="@+id/MiejsceTxt"
+        android:layout_width="88dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="69dp"
+        android:layout_below="@+id/textView7"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/OpisTxt"
+        android:layout_width="323dp"
+        android:layout_height="148dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="128dp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sendPost"
+        android:text="@string/Submit"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="314dp"
+        android:layout_alignBottom="@+id/NazwaInsert"
+        android:layout_alignEnd="@+id/OpisTxt" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/textView5"
+        android:layout_below="@+id/MiejsceTxt"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textView6"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textView7"
+        android:layout_below="@+id/NazwaInsert"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

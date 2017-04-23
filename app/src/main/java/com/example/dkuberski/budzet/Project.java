@@ -38,7 +38,11 @@ public class Project extends AppCompatActivity {
         EditText opisProjektu = (EditText) findViewById(R.id.OpisTxt);
         String opisProjektuTxt = opisProjektu.getText().toString();
 
-        try {
+        new DataBaseHandler().execute(nazwaProjektuTxt,miejsceProjektuTxt,opisProjektuTxt);
+
+    }
+
+        /*try {
             // open a connection to the site
             URL url = new URL("217.61.16.10/mateusz/add_project.php");
             URLConnection con = url.openConnection();
@@ -46,22 +50,26 @@ public class Project extends AppCompatActivity {
             con.setDoOutput(true);
             PrintStream ps = new PrintStream(con.getOutputStream());
             // send your parameters to your site
-            ps.print(nazwaProjektuTxt);
-            ps.print(miejsceProjektuTxt);
-            ps.print(opisProjektuTxt);
+            //ps.print(nazwaProjektuTxt);
+            ps.print("nazwaProjektuTxt = " +nazwaProjektuTxt);
+            //ps.print(miejsceProjektuTxt);
+            ps.print("miejsceProjektuTxt = " +miejsceProjektuTxt);
+            //ps.print(opisProjektuTxt);
+            ps.print("opisProjektuTxt = " +opisProjektuTxt);
 
             // we have to get the input stream in order to actually send the request
             con.getInputStream();
 
             // close the print stream
             ps.close();
+
+
         } catch (MalformedURLException e1) {
             e1.printStackTrace();
         } catch (IOException e2) {
             e2.printStackTrace();
-        }
+        }*/
 
 
     }
-}
 

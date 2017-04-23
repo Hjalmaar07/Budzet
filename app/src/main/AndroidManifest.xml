@@ -35,7 +35,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dkuberski.budzet.Register" />
         </activity>
-        <activity android:name=".Project"></activity>
+
+
+        <activity
+            android:name=".Project"
+            android:label="@string/title_activity_register"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dkuberski.budzet.MainActivity" />
+        </activity>
+
     </application>
 
 </manifest>

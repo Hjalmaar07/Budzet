@@ -28,10 +28,7 @@ public class DataBaseHandler extends AsyncTask<String, Void, Boolean> {
            URL obj = new URL(url);
            HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
-           //add request header
            con.setRequestMethod("POST");
-           //  con.setRequestProperty("User-Agent", USER_AGENT);
-           //con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
 
            String str = "nazwaProjektuTxt=" + nazwaProjektuTxt + "&miejsceProjektuTxt=" + miejsceProjektuTxt + "&opisProjektuTxt=" + opisProjektuTxt;
 

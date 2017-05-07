@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
     }
 
     public void goToLogin(View v)
@@ -26,5 +25,7 @@ public class MainActivity extends AppCompatActivity {
         Intent Project = new Intent(this, Project.class);
         startActivity(Project);
     }
+
+
 
 }

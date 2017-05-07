@@ -46,6 +46,7 @@ public class Login extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
+
         inputEmail = (EditText) findViewById(R.id.loginEmailEditText);
         inputPassword = (EditText) findViewById(R.id.loginEmailEditText);
         btnLogin = (Button) findViewById(R.id.loginButtonCommit);

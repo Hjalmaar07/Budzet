@@ -14,5 +14,6 @@
     <string name="textView6">Nazwa</string>
     <string name="textView7">Miejsce</string>
     <string name="buttonAdd">Dodaj</string>
+    <string name="filter">Filtruj:</string>
 </resources>
 

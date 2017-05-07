@@ -13,21 +13,22 @@ import java.net.URL;
  * Created by Mateusz on 24.04.2017.
  */
 
-public class DataBaseHandler extends AsyncTask<String, Void, Boolean> {
+public class RegisterHandler extends AsyncTask<String, Void, Boolean> {
 
-        DataBaseHandler(String...args){}
+        RegisterHandler(String...args){}
     @Override
     protected Boolean doInBackground(String... params) {
-        String nazwaProjektuTxt = params[0];
-        String opisProjektuTxt = params[1];
+        String registerLoginTxt = params[0];
+        String registerEmailTxt = params[1];
+        String registerPasswordTxt = params[2];
        try {
-           String url = "http://217.61.16.10/mateusz/add_project.php";
+           String url = "http://217.61.16.10/mateusz/register.php";
            URL obj = new URL(url);
            HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
            con.setRequestMethod("POST");
 
-           String str = "nazwaProjektuTxt=" + nazwaProjektuTxt + "&opisProjektuTxt=" + opisProjektuTxt;
+           String str = "registerLoginTxt=" + registerLoginTxt + "&registerEmailTxt=" + registerEmailTxt + "&registerPasswordTxt=" + registerPasswordTxt;
 
            // Send post request
            con.setDoOutput(true);
@@ -55,7 +56,7 @@ public class DataBaseHandler extends AsyncTask<String, Void, Boolean> {
            System.out.println(response.toString());
        }
        catch(Exception ex){
-           Log.e("DataBaseHandler","",ex);
+           Log.e("RegisterHandler","",ex);
        }
         return true;
     }

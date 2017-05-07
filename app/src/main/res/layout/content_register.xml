@@ -19,9 +19,9 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/registerEmailEditText"
+        android:hint="@string/editTextHintEmail"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:hint="@string/editTextHintEmail" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -35,13 +35,14 @@
         android:hint="@string/editTextHint" />
 
     <Button
-        android:text="@string/buttonRegister"
+        android:id="@+id/registerButtonCommit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:id="@+id/registerButtonCommit"
         android:layout_below="@+id/registerPasswordEditText"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:onClick="sendPost2"
+        android:text="@string/buttonRegister" />
 
     <TextView
         android:text="@string/textview2"
@@ -59,5 +60,16 @@
         android:id="@+id/buttonGoToLogin"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="58dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Login"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/registerPasswordEditText" />
 
 </RelativeLayout>

@@ -23,6 +23,6 @@
 
     <include
         layout="@layout/content_login"
-        android:layout_height="591dp" />
+        />
 
 </android.support.design.widget.CoordinatorLayout>

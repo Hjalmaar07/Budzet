@@ -33,12 +33,12 @@ public class Project extends AppCompatActivity {
     public void sendPost(View view) throws Exception {
         EditText nazwaProjektu = (EditText) findViewById(R.id.NazwaInsert);
         String nazwaProjektuTxt = nazwaProjektu.getText().toString();
-        EditText miejsceProjektu = (EditText) findViewById(R.id.MiejsceTxt);
-        String miejsceProjektuTxt = miejsceProjektu.getText().toString();
+       // EditText miejsceProjektu = (EditText) findViewById(R.id.MiejsceTxt);
+       // String miejsceProjektuTxt = miejsceProjektu.getText().toString();
         EditText opisProjektu = (EditText) findViewById(R.id.OpisTxt);
         String opisProjektuTxt = opisProjektu.getText().toString();
 
-        new DataBaseHandler().execute(nazwaProjektuTxt,miejsceProjektuTxt,opisProjektuTxt);
+        new DataBaseHandler().execute(nazwaProjektuTxt,opisProjektuTxt);
     }
 
 }

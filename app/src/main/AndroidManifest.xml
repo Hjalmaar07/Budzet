@@ -44,7 +44,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dkuberski.budzet.MainActivity" />
         </activity>
-        <activity android:name=".ProjectsList"></activity>
+        <activity android:name=".ProjectsList" />
+        <activity
+            android:name=".Projects_list"
+            android:label="@string/title_activity_projects_list"></activity>
     </application>
 
 </manifest>

@@ -121,11 +121,12 @@ public class Login extends AppCompatActivity {
             public void onResponse(String response) {
                 Log.d(TAG, "Login Response: " + response.toString());
                 hideDialog();
+                //System.out.println(response.toString);
 
                 try {
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
-
+                    // co zawiera jObj w tym miejscu
                     // Check for error node in json
                     if (!error) {
                         // user successfully logged in

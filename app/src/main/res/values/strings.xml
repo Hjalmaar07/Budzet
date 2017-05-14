@@ -3,6 +3,7 @@
     <string name="buttonRegister">Zarejestruj</string>
     <string name="title_activity_register">Zarejestruj</string>
     <string name="buttonLogin">Zaloguj</string>
+    <string name="buttonPrint">Projekty</string>
     <string name="editTextHintEmail">e-mail</string>
     <string name="editTextHint">haslo</string>
     <string name="title_activity_login">Zaloguj</string>
@@ -16,5 +17,8 @@
     <string name="buttonAdd">Dodaj</string>
     <string name="filter">Filtruj:</string>
     <string name="browseProjects">Prezglądaj projekty</string>
+    <string name="title_activity_projects_list">Projects_list</string>
+    <string name="ProjectDownload">Wypisz</string>
+    <string name="TextView4"></string>
 </resources>
 

@@ -15,5 +15,6 @@
     <string name="textView7">Miejsce</string>
     <string name="buttonAdd">Dodaj</string>
     <string name="filter">Filtruj:</string>
+    <string name="browseProjects">Prezglądaj projekty</string>
 </resources>
 

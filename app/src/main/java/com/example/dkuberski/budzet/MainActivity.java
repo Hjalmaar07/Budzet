@@ -26,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(Project);
     }
 
+    public void goToProjectList(View v)
+    {
+        Intent projectList = new Intent(this, ProjectsList.class);
+        startActivity(projectList);
+    }
+
 
 
 }

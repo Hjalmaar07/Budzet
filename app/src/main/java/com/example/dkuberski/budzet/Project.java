@@ -9,6 +9,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -19,6 +22,9 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+
+import android.util.Log;
+
 public class Project extends AppCompatActivity {
 
     @Override
@@ -28,16 +34,20 @@ public class Project extends AppCompatActivity {
     }
 
     public void sendPost(View view) throws Exception {
-        Spinner nazwaProjektu = (Spinner) findViewById(R.id.WojewodztwoTxt);
+        TextView nazwaProjektu = (TextView) findViewById(R.id.textView6);
         String nazwaProjektuTxt = nazwaProjektu.getText().toString();
+        TextView opisProjektu = (TextView) findViewById(R.id.textView5);
+        String opisProjektuTxt = opisProjektu.getText().toString();
+        Spinner wojewodztwo = (Spinner) findViewById(R.id.WojewodztwoTxt);
+        String wojewodztwoTxt = wojewodztwo.getSelectedItem().toString();
 
 
-        new DataBaseHandler().execute(nazwaProjektuTxt,opisProjektuTxt);
+        new DataBaseHandler().execute(nazwaProjektuTxt,opisProjektuTxt,wojewodztwoTxt);
     }
 
 
     public void getWojewodztwa(View view) {
-        new GetMethodDemo().execute("http://217.61.16.10/mateusz/print_project.php");
+        new GetMethodDemo().execute("http://217.61.16.10/mateusz/getWoj.php");
     }
     private String readStream(InputStream is) throws IOException {
         StringBuilder sb = new StringBuilder();
@@ -50,11 +60,34 @@ public class Project extends AppCompatActivity {
     }
 
     public class Projects {
+        int id;
         String nazwa;
-        String opis;
-    }
+        public Projects(){}
 
+        public Projects(int id, String nazwa) {
+            this.id = id;
+            this.nazwa = nazwa;
+        }
+        public void setId(int id){
+            this.id = id;
+        }
+
+        public void setName(String nazwa){
+            this.nazwa = nazwa;
+        }
+
+        public int getId(){
+            return this.id;
+        }
+
+        public String getName(){
+            return this.nazwa;
+        }
+    }
     public class GetMethodDemo extends AsyncTask<String, Void, String> {
+
+        private ArrayList<Projects> listaWoj;
+        listaWoj = new ArrayList<Projects>();
         String server_response;
         @Override
         protected String doInBackground(String... strings) {
@@ -105,14 +138,37 @@ public class Project extends AppCompatActivity {
 
             for (int i = 0; i < projectsArray.length; i++){
                 test.append("Nazwa: ");
-                test.append(projectsArray[i].nazwa);
+                test.append(projectsArray[i].id);
                 test.append(" Opis: ");
-                test.append(projectsArray[i].opis);
+                test.append(projectsArray[i].nazwa);
                 test.append("\n");
             }
 
             textView.setText(test.toString());
 
+
+
+            // -----
+            List<String> lables = new ArrayList<String>();
+
+            // chyba niepotrzebne txtCategory.setText("");
+
+            for (int i = 0; i < listaWoj.size(); i++) {
+                lables.add(listaWoj.get(i).getName());
+            }
+/* to chyba tez nie potrzebne
+            // Creating adapter for spinner
+            ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(this,
+                    android.R.layout.simple_spinner_item, lables);
+
+            // Drop down layout style - list view with radio button
+            spinnerAdapter
+                    .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+            // attaching data adapter to spinner
+            spinnerFood.setAdapter(spinnerAdapter);
+
+*/
         }
     }
 

@@ -8,12 +8,20 @@ import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import android.widget.Toast;
+
+import android.content.Context;
+import android.app.Application;
+import android.app.Activity;
+
 
 /**
  * Created by dkuberski on 2017-06-04.
  */
 
 public class LoginHandler extends AsyncTask<String, Void, Boolean> {
+
+
     LoginHandler(String...args){}
     @Override
     protected Boolean doInBackground(String... params) {
@@ -23,6 +31,8 @@ public class LoginHandler extends AsyncTask<String, Void, Boolean> {
             String url = "http://217.61.16.10/mateusz/login.php";
             URL obj = new URL(url);
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+
 
             con.setRequestMethod("POST");
 
@@ -44,14 +54,25 @@ public class LoginHandler extends AsyncTask<String, Void, Boolean> {
                     new InputStreamReader(con.getInputStream()));
             String inputLine;
             StringBuffer response = new StringBuffer();
-
             while ((inputLine = in.readLine()) != null) {
+
                 response.append(inputLine);
             }
             in.close();
 
             //print result
             System.out.println(response.toString());
+
+            if(response.toString() != "Problim"){
+                Toast.makeText(this, "Blad", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                Toast.makeText(this, "Zalogowano", Toast.LENGTH_SHORT).show();
+            }
+
+
+
         }
         catch(Exception ex){
             Log.e("RegisterHandler","",ex);

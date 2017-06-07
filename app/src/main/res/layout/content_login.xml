@@ -40,6 +40,7 @@
         android:text="@string/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="click"
         android:layout_marginTop="25dp"
         android:id="@+id/loginButtonCommit"
         android:layout_below="@+id/loginPasswordEditText"

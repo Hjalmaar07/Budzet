@@ -33,6 +33,9 @@ public class Project extends AppCompatActivity {
         setContentView(R.layout.activity_project);
     }
 
+    private ArrayList<Projects> listaWoj;
+    listaWoj = new ArrayList<Projects>();
+
     public void sendPost(View view) throws Exception {
         TextView nazwaProjektu = (TextView) findViewById(R.id.textView6);
         String nazwaProjektuTxt = nazwaProjektu.getText().toString();
@@ -86,8 +89,7 @@ public class Project extends AppCompatActivity {
     }
     public class GetMethodDemo extends AsyncTask<String, Void, String> {
 
-        private ArrayList<Projects> listaWoj;
-        listaWoj = new ArrayList<Projects>();
+
         String server_response;
         @Override
         protected String doInBackground(String... strings) {
@@ -146,12 +148,12 @@ public class Project extends AppCompatActivity {
 
             textView.setText(test.toString());
 
-
+            // chyba niepotrzebne txtCategory.setText("");
 
             // -----
             List<String> lables = new ArrayList<String>();
 
-            // chyba niepotrzebne txtCategory.setText("");
+
 
             for (int i = 0; i < listaWoj.size(); i++) {
                 lables.add(listaWoj.get(i).getName());
@@ -171,6 +173,8 @@ public class Project extends AppCompatActivity {
 */
         }
     }
+// ------
+
 
 }
 

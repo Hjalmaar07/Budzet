@@ -8,11 +8,6 @@ import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import android.widget.Toast;
-
-import android.content.Context;
-import android.app.Application;
-import android.app.Activity;
 
 
 /**
@@ -63,13 +58,7 @@ public class LoginHandler extends AsyncTask<String, Void, Boolean> {
             //print result
             System.out.println(response.toString());
 
-            if(response.toString() != "Problim"){
-                Toast.makeText(this, "Blad", Toast.LENGTH_SHORT).show();
-            }
-            else
-            {
-                Toast.makeText(this, "Zalogowano", Toast.LENGTH_SHORT).show();
-            }
+
 
 
 
@@ -79,4 +68,5 @@ public class LoginHandler extends AsyncTask<String, Void, Boolean> {
         }
         return true;
     }
+
 }

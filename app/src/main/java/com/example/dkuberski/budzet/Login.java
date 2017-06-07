@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
-
+import android.widget.Toast;
 
 
 public class Login extends AppCompatActivity {
@@ -20,9 +20,16 @@ public class Login extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
+    public void click(View view) throws Exception
+    {
+        if(sendPost2(view))
+        {
 
+        }
 
-        public void sendPost2(View view) throws Exception {
+    }
+
+        public boolean sendPost2(View view) throws Exception {
             EditText loginEmail = (EditText) findViewById(R.id.loginEmailEditText);
             String loginEmailTxt = loginEmail.getText().toString();
             EditText loginPassword = (EditText) findViewById(R.id.loginPasswordEditText);
@@ -30,7 +37,17 @@ public class Login extends AppCompatActivity {
 
 
 
+
             new LoginHandler().execute(loginEmailTxt,loginPasswordTxt);
+
+            if(response.toString() != "Problim"){
+                return false;
+            }
+            else
+            {
+                return true;
+
+            }
         }
 
 }

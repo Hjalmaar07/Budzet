@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent login = new Intent(this, Login.class);
         startActivity(login);
+
     }
     public void goToProject(View v)
     {

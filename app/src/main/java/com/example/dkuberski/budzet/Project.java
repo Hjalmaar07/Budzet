@@ -5,12 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import com.google.gson.Gson;
 
@@ -21,9 +17,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-
-
-import android.util.Log;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Project extends AppCompatActivity {
 
@@ -34,7 +29,7 @@ public class Project extends AppCompatActivity {
     }
 
     private ArrayList<Projects> listaWoj;
-    listaWoj = new ArrayList<Projects>();
+    // listaWoj = new ArrayList<Projects>();
 
     public void sendPost(View view) throws Exception {
         TextView nazwaProjektu = (TextView) findViewById(R.id.textView6);

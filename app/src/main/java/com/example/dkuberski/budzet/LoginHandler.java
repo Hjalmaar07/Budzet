@@ -16,6 +16,7 @@ import java.net.URL;
 
 public class LoginHandler extends AsyncTask<String, Void, Boolean> {
 
+    static private int dziala = 0;
 
     LoginHandler(String...args){}
     @Override
@@ -54,6 +55,11 @@ public class LoginHandler extends AsyncTask<String, Void, Boolean> {
                 response.append(inputLine);
             }
             in.close();
+            if (response.toString() == "Problim")
+            {
+                dziala = 0;
+            }
+            else dziala = 1;
 
             //print result
             System.out.println(response.toString());
@@ -67,6 +73,11 @@ public class LoginHandler extends AsyncTask<String, Void, Boolean> {
             Log.e("RegisterHandler","",ex);
         }
         return true;
+    }
+
+    static public int getDziala()
+    {
+        return dziala;
     }
 
 }

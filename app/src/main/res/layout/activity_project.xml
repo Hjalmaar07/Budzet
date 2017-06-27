@@ -26,7 +26,6 @@
     <Spinner
 
         android:id="@+id/WojewodztwoTxt"
-        android:onClick="getWojewodztwa"
         android:layout_width="88dp"
         android:layout_height="39dp"
         android:ems="10"

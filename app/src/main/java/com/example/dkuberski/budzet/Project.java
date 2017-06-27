@@ -1,12 +1,19 @@
 package com.example.dkuberski.budzet;
 
+import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.Gson;
 
@@ -17,8 +24,9 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
+
+
+import android.util.Log;
 
 public class Project extends AppCompatActivity {
 
@@ -26,27 +34,44 @@ public class Project extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project);
+        Spinner spinner = (Spinner) findViewById(R.id.WojewodztwoTxt);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Wojewodztwa, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        Spinner spinner2 = (Spinner) findViewById(R.id.PowiatTxt);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.Powiaty, android.R.layout.simple_spinner_item);
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner2.setAdapter(adapter2);
+        Spinner spinner3 = (Spinner) findViewById(R.id.GminaTxt);
+        ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.Gminy, android.R.layout.simple_spinner_item);
+        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner3.setAdapter(adapter3);
+        Spinner spinner4 = (Spinner) findViewById(R.id.MiastoTxt);
+        ArrayAdapter<CharSequence> adapter4 = ArrayAdapter.createFromResource(this, R.array.Miasta, android.R.layout.simple_spinner_item);
+        adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner4.setAdapter(adapter4);
     }
 
-    private ArrayList<Projects> listaWoj;
-    // listaWoj = new ArrayList<Projects>();
+
+
 
     public void sendPost(View view) throws Exception {
         TextView nazwaProjektu = (TextView) findViewById(R.id.textView6);
         String nazwaProjektuTxt = nazwaProjektu.getText().toString();
         TextView opisProjektu = (TextView) findViewById(R.id.textView5);
         String opisProjektuTxt = opisProjektu.getText().toString();
-        Spinner wojewodztwo = (Spinner) findViewById(R.id.WojewodztwoTxt);
-        String wojewodztwoTxt = wojewodztwo.getSelectedItem().toString();
 
 
-        new DataBaseHandler().execute(nazwaProjektuTxt,opisProjektuTxt,wojewodztwoTxt);
+        new DataBaseHandler().execute(nazwaProjektuTxt,opisProjektuTxt);
     }
+  //  public void Spinner(){
+    //    Spinner wojewodztwo = (Spinner) findViewById(R.id.WojewodztwoTxt);
+        //String wojewodztwoTxt = wojewodztwo.getSelectedItem().toString();
+   // }
 
-
-    public void getWojewodztwa(View view) {
-        new GetMethodDemo().execute("http://217.61.16.10/mateusz/getWoj.php");
-    }
+   // public void getWojewodztwa(View view) {
+   //     new GetMethodDemo().execute("http://217.61.16.10/mateusz/getWoj.php");
+   // }
     private String readStream(InputStream is) throws IOException {
         StringBuilder sb = new StringBuilder();
         BufferedReader r = new BufferedReader(new InputStreamReader(is),1000);
@@ -84,7 +109,8 @@ public class Project extends AppCompatActivity {
     }
     public class GetMethodDemo extends AsyncTask<String, Void, String> {
 
-
+       // private ArrayList<Projects> listaWoj;
+       // listaWoj = new ArrayList<Projects>();
         String server_response;
         @Override
         protected String doInBackground(String... strings) {
@@ -143,16 +169,16 @@ public class Project extends AppCompatActivity {
 
             textView.setText(test.toString());
 
-            // chyba niepotrzebne txtCategory.setText("");
+
 
             // -----
-            List<String> lables = new ArrayList<String>();
+           // List<String> lables = new ArrayList<String>();
 
+            // chyba niepotrzebne txtCategory.setText("");
 
-
-            for (int i = 0; i < listaWoj.size(); i++) {
-                lables.add(listaWoj.get(i).getName());
-            }
+           // for (int i = 0; i < listaWoj.size(); i++) {
+           //     lables.add(listaWoj.get(i).getName());
+           // }
 /* to chyba tez nie potrzebne
             // Creating adapter for spinner
             ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(this,
@@ -168,8 +194,6 @@ public class Project extends AppCompatActivity {
 */
         }
     }
-// ------
-
 
 }
 

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Budzet</string>
     <string name="buttonRegister">Zarejestruj</string>
@@ -20,5 +21,367 @@
     <string name="title_activity_projects_list">Projects_list</string>
     <string name="ProjectDownload">Wypisz</string>
     <string name="TextView4"></string>
+
+
+        <string-array name="Wojewodztwa">
+            <item>dolnosląskie</item>
+            <item>kujawsko-pomorskie</item>
+            <item>lubelskie</item>
+            <item>lubuskie</item>
+            <item>łódzkie</item>
+            <item>małopolskie</item>
+            <item>mazowieckie</item>
+            <item>opolskie</item>
+            <item>podkarpackie</item>
+            <item>podlaskie</item>
+            <item>pomorskie</item>
+            <item>śląskie</item>
+            <item>świetokrzyskie</item>
+            <item>warmińsko-mazurskie</item>
+            <item>wielkopolskie</item>
+            <item>zachodniopomorskie</item>
+        </string-array>
+
+    <string-array name="Powiaty">
+        <item>Bolesławiecki</item>
+        <item>Dzierżoniowski</item>
+        <item> Głogowski</item>
+        <item> Górowski</item>
+        <item>  Jaworski</item>
+        <item>  Jeleniogórski</item>
+        <item>  Kamiennogórski</item>
+        <item>  Kłodzki</item>
+        <item>  Legnicki</item>
+        <item> Lubański</item>
+        <item> Lubiński</item>
+        <item> Lwówecki</item>
+        <item> Milicki</item>
+        <item> Oławski</item>
+        <item> Oleśnicki</item>
+        <item> Polkowicki</item>
+        <item>  Średzki</item>
+        <item> Strzeliński</item>
+        <item> Świdnicki</item>
+        <item> Trzebnicki</item>
+        <item> Wałbrzyski</item>
+        <item>  Wołowski</item>
+        <item>  Wrocławski</item>
+        <item>  Ząbkowicki</item>
+        <item> Zgorzelecki</item>
+        <item>  Złotoryjski</item>
+        <item> Aleksandrowski</item>
+        <item> Brodnicki</item>
+        <item> Bydgoski</item>
+        <item>  Chełmiński</item>
+        <item>Golubsko-dobrzyński</item>
+        <item> Grudziądzki</item>
+        <item> Inowrocławski</item>
+        <item> Lipnowski</item>
+        <item>  Mogileński</item>
+        <item>  Nakielski</item>
+        <item> Radziejowski</item>
+        <item> Rypiński</item>
+        <item>  Sępoleński</item>
+        <item>  Świecki</item>
+        <item> Toruński</item>
+        <item> Tucholski</item>
+        <item> Wąbrzeski</item>
+        <item>Włocławski</item>
+        <item> Żniński</item>
+        <item> Bialski</item>
+        <item> Biłgorajski</item>
+        <item> Chełmski</item>
+        <item> Hrubieszowski</item>
+        <item> Janowski</item>
+        <item> Kraśnicki</item>
+        <item>Krasnostawski</item>
+        <item> Łęczyński</item>
+        <item>  Lubartowski</item>
+        <item>  Lubelski</item>
+        <item>  Łukowski</item>
+        <item>  Opolski</item>
+        <item>  Parczewski</item>
+        <item> Puławski</item>
+        <item>  Radzyński</item>
+        <item>  Rycki</item>
+        <item>  Świdnicki</item>
+        <item>  Tomaszowski</item>
+        <item> Włodawski</item>
+        <item>  Zamojski</item>
+        <item>  Gorzowski</item>
+        <item> Krośnieński</item>
+        <item>  Międzyrzecki</item>
+        <item>  Nowosolski</item>
+        <item> Słubicki</item>
+        <item> Strzelecko-drezdenecki</item>
+        <item>  Sulęciński</item>
+        <item>  Świebodziński</item>
+        <item>  Wschowski</item>
+        <item> Żagański</item>
+        <item> Żarski</item>
+        <item> Zielonogórski</item>
+        <item> Bełchatowski</item>
+        <item> Brzeziński</item>
+        <item> Kutnowski</item>
+        <item> Łaski</item>
+        <item> Łęczycki</item>
+        <item> Łódzki wschodni</item>
+        <item>  Łowicki</item>
+        <item> Opoczyński</item>
+        <item> Pabianicki</item>
+        <item> Pajęczański</item>
+        <item> Piotrkowski</item>
+        <item> Poddębicki</item>
+        <item> Radomszczański</item>
+        <item>   Rawski</item>
+        <item> Sieradzki</item>
+        <item>  Skierniewicki</item>
+        <item>  Tomaszowski</item>
+        <item> Wieluński</item>
+        <item>  Wieruszowski</item>
+        <item>  Zduńskowolski</item>
+        <item>Zgierski</item>
+        <item> Bocheński</item>
+        <item> Brzeski</item>
+        <item> Chrzanowski</item>
+        <item> Dąbrowski</item>
+        <item> Gorlicki</item>
+        <item>  Krakowski</item>
+        <item> Limanowski</item>
+        <item> Miechowski</item>
+        <item>  Myślenicki</item>
+        <item>  Nowosądecki</item>
+        <item>  Nowotarski</item>
+        <item>  Olkuski</item>
+        <item> Oświęcimski</item>
+        <item>Proszowicki</item>
+        <item> Suski</item>
+        <item>  Tarnowski</item>
+        <item>  Tatrzański</item>
+        <item> Wadowicki</item>
+        <item> Wielicki</item>
+        <item>  Białobrzeski</item>
+        <item>  Ciechanowski</item>
+        <item> Garwoliński</item>
+        <item>  Gostyniński</item>
+        <item> Grodziski</item>
+        <item> Grójecki</item>
+        <item>  Kozienicki</item>
+        <item>  Legionowski</item>
+        <item> Lipski</item>
+        <item> Łosicki</item>
+        <item> Makowski</item>
+        <item> Miński</item>
+        <item> Mławski</item>
+        <item> Nowodworski</item>
+        <item>  Ostrołęcki</item>
+        <item> Ostrowski</item>
+        <item>  Otwocki</item>
+        <item> Piaseczyński</item>
+        <item>  Płocki</item>
+        <item> Płoński</item>
+        <item>  Pruszkowski</item>
+        <item> Przasnyski</item>
+        <item> Przysuski</item>
+        <item>  Pułtuski</item>
+        <item> Radomski</item>
+        <item> Siedlecki</item>
+        <item> Sierpecki</item>
+        <item> Sochaczewski</item>
+        <item> Sokołowski</item>
+        <item> Szydłowiecki</item>
+        <item>  Warszawski zachodni</item>
+        <item>  Węgrowski</item>
+        <item>  Wołomiński</item>
+        <item> Wyszkowski</item>
+        <item>  Żuromiński</item>
+        <item> Zwoleński</item>
+        <item> Zyrardowski</item>
+        <item> brzeski</item>
+        <item> głubczycki</item>
+        <item> kędzierzyńsko-kozielski</item>
+        <item>  kluczborski</item>
+        <item>  krapkowicki</item>
+        <item>  namysłowski</item>
+        <item>  nyski</item>
+        <item>  oleski</item>
+        <item>  opolski</item>
+        <item>  prudnicki</item>
+        <item>  strzelecki</item>
+        <item>  bieszczadzki</item>
+        <item>  brzozowski</item>
+        <item> dębicki</item>
+        <item>  jarosławski</item>
+        <item>  jasielski</item>
+        <item> kolbuszowski</item>
+        <item>  krośnieński</item>
+        <item>  leżajski</item>
+        <item>   lubaczowski</item>
+        <item> łańcucki</item>
+        <item>  mielecki</item>
+        <item> niżański</item>
+        <item> przemyski</item>
+        <item> przeworski</item>
+        <item> ropczycko-sędziszowski</item>
+        <item>rzeszowski</item>
+        <item> sanocki</item>
+        <item> stalowowolski</item>
+        <item>  strzyżowski</item>
+        <item>  tarnobrzeski</item>
+        <item>  leski</item>
+        <item>  augustowski</item>
+        <item>  białostocki</item>
+        <item>  bielski</item>
+        <item>  grajewski</item>
+        <item> hajnowski</item>
+        <item> kolneński</item>
+        <item> łomżyński</item>
+        <item> moniecki</item>
+        <item> sejneński</item>
+    </string-array>
+
+        <string-array name="Miasta">
+            <item> Nowogrodziec</item>
+            <item> Pieszyce</item>
+            <item> Niemcza</item>
+            <item> Góra</item>
+            <item> Wąsosz</item>
+            <item> Bolków</item>
+            <item> Lubawka</item>
+            <item>  Bystrzyca Kłodzka</item>
+            <item>  Lądek-Zdrój</item>
+            <item> Międzylesie</item>
+            <item> Radków</item>
+            <item> Stronie Śląskie</item>
+            <item> Szczytna</item>
+            <item> Prochowice</item>
+            <item> Leśna</item>
+            <item> Olszyna</item>
+            <item>Ścinawa</item>
+            <item> Gryfów Śląski</item>
+            <item> Lubomierz</item>
+            <item> Lwówek Śląski</item>
+            <item> Mirsk</item>
+            <item> Wleń</item>
+            <item> Milicz</item>
+            <item> Bierutów</item>
+            <item> Międzybórz</item>
+            <item> Syców</item>
+            <item>Twardogóra</item>
+            <item>Jelcz-Laskowice</item>
+            <item> Chocianów</item>
+            <item> Polkowice</item>
+            <item> Przemków</item>
+            <item>  Strzelin</item>
+            <item>  Wiązów</item>
+            <item> Środa Śląska</item>
+            <item>  Jaworzyna Śląska</item>
+            <item> Strzegom</item>
+            <item>  Żarów</item>
+            <item>Oborniki Śląskie</item>
+            <item> Prusice</item>
+            <item> Trzebnica</item>
+            <item> Żmigród</item>
+            <item> Głuszyca</item>
+            <item>  Mieroszów</item>
+            <item> Brzeg Dolny</item>
+            <item>  Wołów</item>
+            <item> Kąty Wrocławskie</item>
+            <item> Sobótka</item>
+            <item> Siechnice</item>
+            <item> Bardo</item>
+            <item> Ząbkowice Śląskie</item>
+            <item>Łódź</item>
+        </string-array>
+
+        <string-array name="Gminy">
+            <item>Marcinowice</item>
+            <item> Strzegom</item>
+            <item> Świdnica</item>
+            <item> Żarów</item>
+            <item> Oborniki Śląskie</item>
+            <item> Prusice</item>
+            <item> Trzebnica</item>
+            <item>  Wisznia Mała</item>
+            <item>  Zawonia</item>
+            <item>  Żmigród</item>
+            <item> Boguszów-Gorce</item>
+            <item> Jedlina-Zdrój</item>
+            <item> Szczawno-Zdrój</item>
+            <item> Czarny Bór</item>
+            <item>Głuszyca</item>
+            <item> Mieroszów</item>
+            <item> Stare Bogaczowice</item>
+            <item> Walim</item>
+            <item> Brzeg Dolny</item>
+            <item> Wińsko</item>
+            <item> Wołów</item>
+            <item> Czernica</item>
+            <item> Długołęka</item>
+            <item> Jordanów Śląski</item>
+            <item> Kąty Wrocławskie</item>
+            <item>Kobierzyce</item>
+            <item>Mietków</item>
+            <item>  Sobótka</item>
+            <item>  Siechnice</item>
+            <item>  Żórawina</item>
+            <item>  Bardo</item>
+            <item>  Ciepłowody</item>
+            <item> Kamieniec Ząbkowicki</item>
+            <item>  Stoszowice</item>
+            <item> Ząbkowice Śląskie</item>
+            <item>  Ziębice</item>
+            <item> Złoty Stok</item>
+            <item> Zawidów</item>
+            <item> Zgorzelec</item>
+            <item> Bogatynia</item>
+            <item> Pieńsk</item>
+            <item> Sulików</item>
+            <item>  Węgliniec</item>
+            <item> Zgorzelec</item>
+            <item>  Wojcieszów</item>
+            <item>  Złotoryja</item>
+            <item>  Pielgrzymka</item>
+            <item> Świerzawa</item>
+            <item> Zagrodno</item>
+            <item> Złotoryja</item>
+            <item>Jelenia Góra</item>
+            <item>Legnica</item>
+            <item> Wrocław</item>
+            <item> Wałbrzych</item>
+            <item> Aleksandrów Kujawski</item>
+            <item>  Ciechocinek</item>
+            <item> Nieszawa</item>
+            <item> Aleksandrów Kujawski</item>
+            <item> Bądkowo</item>
+            <item> Koneck</item>
+            <item> Raciążek</item>
+            <item> Waganiec</item>
+            <item> Zakrzewo</item>
+            <item> Brodnica</item>
+            <item> Bobrowo</item>
+            <item> Brodnica</item>
+            <item> Brzozie</item>
+            <item> Górzno</item>
+            <item> Bartniczka</item>
+            <item> Jabłonowo Pomorskie</item>
+            <item> Osiek</item>
+            <item>  Świedziebnia</item>
+            <item> Zbiczno</item>
+            <item>  Białe Błota</item>
+            <item>  Dąbrowa Chełmińska</item>
+            <item> Dobrcz</item>
+            <item> Koronowo</item>
+            <item>  Nowa Wieś Wielka</item>
+            <item>Osielsko</item>
+            <item> Sicienko</item>
+            <item>  Solec Kujawski</item>
+            <item>Chełmno</item>
+            <item>Kijewo Królewskie</item>
+            <item>  Lisewo</item>
+            <item> Papowo Biskupie</item>
+            <item> Stolno</item>
+            <item> Unisław</item>
+        </string-array>
 </resources>
 
